@@ -4,6 +4,7 @@ const btn = document.getElementById('buttonTest');
 document.getElementById('myformtest')
  .addEventListener('submit', function(event) {
    event.preventDefault();
+   var formId = this.id;
     console.log('aca estoy')
    btn.value = 'Sending...';
 
@@ -15,8 +16,9 @@ document.getElementById('myformtest')
       btn.value = 'Send Email';
       alert('Sent!');
       dataLayer.push({
-        'event': 'modal_displayed',
-        
+        'event': 'formSubmit',
+        'time':new Date(),
+        'formId': formId
     });
     }, (err) => {
       btn.value = 'Send Email';
