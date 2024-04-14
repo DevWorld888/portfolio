@@ -14,6 +14,10 @@ document.getElementById('myformtest')
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
+      dataLayer.push({
+        'event': 'modal_displayed',
+        
+    });
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
