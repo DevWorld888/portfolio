@@ -15,11 +15,11 @@ document.getElementById('myformtest')
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
-      dataLayer.push({
-        'event': 'formSubmit',
-        'time':new Date(),
-        'formId': formId
-    });
+    //   dataLayer.push({
+    //     'event': 'formSubmit',
+    //     'time':new Date(),
+    //     'formId': formId,
+    // });
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
