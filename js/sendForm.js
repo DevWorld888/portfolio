@@ -15,7 +15,7 @@ document.getElementById('myformtest')
     .then(() => {
       btn.value = 'Send Email';
       alert('Sent!');
-      dataLayer.push({
+      dataLayer({
         'event': 'formSubmit',
         'time':new Date(),
         'formId': formId
